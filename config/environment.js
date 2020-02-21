@@ -1,5 +1,12 @@
 'use strict';
 
-module.exports = function(/* environment, appConfig */) {
-  return { };
+const pkg = require('../package');
+
+module.exports = function(environment) {
+  const ENV = {
+    modulePrefix: pkg.name,
+    environment: environment
+  }
+
+  return ENV;
 };
